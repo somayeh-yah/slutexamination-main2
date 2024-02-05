@@ -29,20 +29,18 @@ async function postMovie(movie) {
       ...movie,
       titleLowerCase: lowercaseTitle,
     });
-    alert("Posted successfully");
+    // alert("Posted successfully");
 
     //här vill vi att våra inputs fält töms efter att vi skickat in data till firestore
     document.querySelector("#inputTitle").value = "";
     document.querySelector("#inputGenre").value = "";
     document.querySelector("#inputReleaseDate").value = "";
 
-    // efter att vi lagt till filmen vill vi att vår firestore databas uppdetaeras med den nya filmen
-    const allMovies = await getAllMovies();
-    // displayAllMovies(allMovies);
   } catch (error) {
     console.log(`ERROR: unsuccessful ${error}`);
   }
 }
+
 
 async function getAMovie(title) {
   try {
@@ -204,9 +202,7 @@ getAllMoviesButton.addEventListener("click", async () => {
 
 const addButtonElm = document.querySelector("#addMoviebutten");
 const showWatchedListButton = document.querySelector("#showWatchedListButton");
-const showUnwatchedListButton = document.querySelector(
-  "#showUnwatchedListButton"
-);
+const showUnwatchedListButton = document.querySelector("#showUnwatchedListButton");
 
 // här definerar vi en funktion för att hämta alla filmer som har blivit sedda
 async function getWatchedMovies() {
@@ -283,7 +279,7 @@ addButtonElm.addEventListener("click", () => {
 });
 
 //här definerar vi en funktion för att kunna visa alla sedda filmer
-let watchedMovies = [];
+
 async function displayWatchedMovies() {
   try {
     const watchedMoviesContentElm = document.querySelector("#allMoviesContent");
@@ -307,8 +303,7 @@ async function displayWatchedMovies() {
 let unWhatchedMovies = [];
 async function displayUnwhatchedMovies() {
   try {
-    const unWhatchedMoviesContentElm =
-      document.querySelector("#allMoviesContent");
+    const unWhatchedMoviesContentElm = document.querySelector("#allMoviesContent");
     if (unWhatchedMoviesContentElm) {
       unWhatchedMoviesContentElm.innerHTML = "";
 
@@ -363,3 +358,5 @@ function displaySearchResults(searchResults) {
     }
   }
 }
+
+export{getWatchedMovies, getUnWatchedMovies}
