@@ -29,7 +29,7 @@ async function postMovie(movie) {
       ...movie,
       titleLowerCase: lowercaseTitle,
     });
-    // alert("Posted successfully");
+    alert("Posted successfully");
 
     //här vill vi att våra inputs fält töms efter att vi skickat in data till firestore
     document.querySelector("#inputTitle").value = "";

@@ -110,7 +110,7 @@ header .navbar a:hover {
   transition: 0.2s;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   #movieImgContainer {
     grid-template-columns: repeat(2, 223px);
   }
@@ -120,7 +120,7 @@ header .navbar a:hover {
   #movieImgContainer {
     grid-template-columns: repeat(1, 223px);
   }
-}
+} */
 
 img {
   border-radius: 4px;
@@ -241,3 +241,91 @@ section {
 .movie-item button:hover {
   background-color: #18211f;
 }
+
+
+/* ----------Mobile device --------------------
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 0.5rem;
+  }
+
+  header a {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .inner-content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input[type="text"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+   
+  }
+
+
+
+
+button [type="button"] {
+  width: 5rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 60px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #6cd591;
+}
+
+  
+  #movieImgContainer {
+    grid-template-columns: repeat(1, 100%);
+    gap: 10px;
+  }
+
+  img {
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  #addMovieSection {
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 2rem);
+    margin-right: 0;
+    margin-bottom: 1rem;
+    margin: 0.5rem;
+  }
+
+  .movie-item {
+    width: calc(100% - 2rem);
+    padding: 0.5rem;
+  }
+} */
